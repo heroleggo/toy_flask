@@ -2,7 +2,8 @@ import pymysql
 
 class database():
 	def __init__(self):
-		self.db = pymysql.connect(host='127.0.0.1', port=3333, user='developer', password='1234', db='bugbounty', charset='utf8')
+		self.db = pymysql.connect(host='localhost', port=3306, user='root', password='qpqpqpqp1', db='develop', charset='utf8')
+		print self.db
 		self.cursor = self.db.cursor(pymysql.cursors.DictCursor)
 
 	def execute(self, query, args={}):
